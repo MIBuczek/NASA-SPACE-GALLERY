@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
+}
+body {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  width: 99vw;
+  margin-top: 0 auto;
+}
+.one {
+  padding-top: 10px;
+  height: 38vh;
+  background: url(../img/time-lapse-photo-of-stars-on-night-924824.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.two {
+  height: 50vh;
+}
+.section__header {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section__header h1 {
+  font-size: 48px;
+  font-weight: lighter;
+  color: white;
+  text-shadow: 3px 3px 5px limegreen;
+}
+.header__nasa {
+  margin-top: 150px;
+  width: 280px;
+  height: auto;
+}
+.cover-img {
+  width: 100%;
+  height: auto;
+}
+.form {
+  justify-content: center;
+  padding: 20px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.form p {
+  width: 15%;
+  font-size: 22px;
+  line-height: 1.5;
+}
+.form-search {
+  border: 1px solid #bbb;
+  padding: 15px;
+  flex-grow: 1;
+  width: 40%;
+}
+#start {
+  max-width: 30%;
+  margin-right: 10px;
+}
+#end {
+  max-width: 30%;
+}
+.form-search-btn,
+.load-more {
+  background: crimson;
+  border: 0;
+  color: #fff;
+  margin-left: 20px;
+  padding: 10px 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.load-more {
+  position: absolute;
+  left: 45%;
+  bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-search-btn:hover {
+  background: #b40d2c;
+}
+.form-search-btn.loading {
+  position: relative;
+  padding-left: 45px;
+}
+.form-search-btn.loading:disabled {
+  background: #b40d2c;
+  color: crimson;
+  cursor: pointer;
+}
+.form-search-btn.loading:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-right-color: #fff;
+  animation: loading 0.3s 0s infinite linear;
+}
+
+@keyframes loading {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.gallery {
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px;
+  background: #fff;
+  min-height: 50vh;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.gallery.loading:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-right-color: #000;
+  animation: loading 0.3s 0s infinite linear;
+  z-index: 100;
+}
+.gallery-element {
+  text-decoration: none;
+  width: 90%;
+  height: auto;
+  margin: 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.gallery-img {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+.gallery-description {
+  margin-left: 10px;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+  color: gray;
+}
+.gallery-description h1 {
+  color: grey;
+  font-size: 3rem;
+}
+.gallery-description h2 {
+  color: darkgrey;
+  font-size: 2rem;
+}
+
+@media (max-width: 1600px) {
+  .gallery-element {
+    flex-direction: column;
+  }
+  .gallery-img {
+    width: 90%;
+  }
+  .gallery-description {
+    justify-content: flex-start;
+    width: 90%;
+  }
+  .one {
+    height: 60vh;
+  }
+  .form {
+    height: 15vh;
+    width: 100%;
+    padding: 1.8rem 0;
+  }
+  .form p {
+    width: 20%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .form {
+    justify-content: center;
+  }
+  .form p {
+    display: block;
+    width: 30%;
+  }
+}
