@@ -1,6 +1,6 @@
 # NASA API Challenge
 
-It is a simple application that connects with NASA api to download basic information about stored pictures in the NASA database.
+It is a simple application that connects with NASA API to download basic information about stored pictures in the their database.
 
 ## Rooth
 
