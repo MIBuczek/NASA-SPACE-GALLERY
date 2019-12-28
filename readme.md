@@ -11,4 +11,8 @@ Then I render it on my website with basic author information , title and descrip
 
 Full screen
 
+![full screen](https://github.com/MIBuczek/NASA-SPACE-GALLERY/blob/master/full%20screen.png)
+
 Mobile screen
+
+![mobile version](https://github.com/MIBuczek/NASA-SPACE-GALLERY/blob/master/mobile%20version.png)
